@@ -1,59 +1,297 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Patient Registration – Haramaya University Health Center</title><link rel="icon" href="assets/img/logo.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="assets/css/style.css"></head><body>
-<svg width="0" height="0" style="position:absolute"><defs>
-<symbol id="i-steth" viewBox="0 0 32 32"><path d="M8 4v8a6 6 0 0012 0V4M5 4h6M17 4h6M14 18v3a6 6 0 0012 0v-2"/><circle cx="26" cy="16" r="3"/></symbol>
-<symbol id="i-kit" viewBox="0 0 32 32"><rect x="4" y="10" width="24" height="17" rx="3"/><path d="M12 10V7h8v3M16 15v8M12 19h8"/></symbol>
-<symbol id="i-book" viewBox="0 0 32 32"><path d="M4 7c4-2 8-2 12 1 4-3 8-3 12-1v18c-4-2-8-2-12 1-4-3-8-3-12-1z M16 8v18"/></symbol>
-<symbol id="i-news" viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" rx="3"/><path d="M10 11h12M10 16h12M10 21h7"/></symbol>
-<symbol id="i-phone" viewBox="0 0 32 32"><path d="M8 4h5l2 6-3 2a15 15 0 007 7l2-3 6 2v5a3 3 0 01-3 3A21 21 0 015 7a3 3 0 013-3z"/></symbol>
-<symbol id="i-bolt" viewBox="0 0 32 32"><path d="M18 3L7 18h8l-2 11 11-15h-8z"/></symbol>
-<symbol id="i-brain" viewBox="0 0 32 32"><path d="M16 6a5 5 0 00-9 3 5 5 0 00-1 8 5 5 0 005 7 4 4 0 005 2zM16 6a5 5 0 019 3 5 5 0 011 8 5 5 0 01-5 7 4 4 0 01-5 2zM16 6v20"/></symbol>
-<symbol id="i-heart" viewBox="0 0 32 32"><path d="M16 27S4 20 4 12a6 6 0 0112-2 6 6 0 0112 2c0 8-12 15-12 15z"/></symbol>
-<symbol id="i-pin" viewBox="0 0 32 32"><path d="M16 29s9-8 9-15a9 9 0 10-18 0c0 7 9 15 9 15z"/><circle cx="16" cy="14" r="3"/></symbol>
-<symbol id="i-user" viewBox="0 0 32 32"><circle cx="16" cy="11" r="6"/><path d="M5 28c0-6 5-10 11-10s11 4 11 10"/></symbol>
-<symbol id="i-shield" viewBox="0 0 32 32"><path d="M16 3l11 4v8c0 7-5 12-11 14C10 27 5 22 5 15V7z"/><path d="M11 16l4 4 7-8"/></symbol>
-<symbol id="i-scale" viewBox="0 0 32 32"><path d="M16 4v22M8 26h16M6 9h20M6 9l-3 9a4 4 0 006 0zM26 9l-3 9a4 4 0 006 0z"/></symbol>
-<symbol id="i-users" viewBox="0 0 32 32"><circle cx="12" cy="11" r="4"/><path d="M4 26c0-5 3-8 8-8s8 3 8 8M21 8a4 4 0 010 7M24 19c3 1 4 4 4 7"/></symbol>
-<symbol id="i-coin" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M20 11c-1-2-7-2-7 1.500s7 1.500 7 5-6 3.500-8 1M16 8v16"/></symbol>
-<symbol id="i-star" viewBox="0 0 32 32"><path d="M16 4l3.500 8 8.500 1-6.500 6 2 8.500L16 23l-7.500 4.500 2-8.500L4 13l8.500-1z"/></symbol>
-<symbol id="i-door" viewBox="0 0 32 32"><path d="M7 28V5h14v23M3 28h26M17 16h2"/></symbol>
-<symbol id="i-bed" viewBox="0 0 32 32"><path d="M3 24V8M3 20h26v4M29 20v-5a4 4 0 00-4-4H13v9"/><circle cx="8" cy="15" r="2.500"/></symbol>
-<symbol id="i-award" viewBox="0 0 32 32"><circle cx="16" cy="12" r="8"/><path d="M11 19l-2 10 7-4 7 4-2-10"/></symbol>
-<symbol id="i-cal" viewBox="0 0 32 32"><rect x="4" y="6" width="24" height="22" rx="3"/><path d="M4 13h24M10 3v6M22 3v6"/></symbol>
-<symbol id="i-flask" viewBox="0 0 32 32"><path d="M12 4h8M14 4v8l-7 12a2 2 0 002 3h14a2 2 0 002-3l-7-12V4M10 20h12"/></symbol>
-<symbol id="i-pill" viewBox="0 0 32 32"><path d="M6 20L18 8a5 5 0 017 7L13 27a5 5 0 01-7-7zM12 14l6 6"/></symbol>
-<symbol id="i-baby" viewBox="0 0 32 32"><circle cx="16" cy="12" r="7"/><path d="M12 12h.01M20 12h.01M13 15.500c2 1.500 4 1.500 6 0M7 29c0-5 4-8 9-8s9 3 9 8"/></symbol>
-<symbol id="i-video" viewBox="0 0 32 32"><rect x="3" y="8" width="19" height="16" rx="3"/><path d="M22 14l7-4v12l-7-4"/></symbol>
-<symbol id="i-amb" viewBox="0 0 32 32"><path d="M3 22V10h15v12M18 14h6l4 5v3M3 22h3M12 22h9M10 13v6M7 16h6"/><circle cx="9" cy="23" r="2.500"/><circle cx="24" cy="23" r="2.500"/></symbol>
-<symbol id="i-lung" viewBox="0 0 32 32"><path d="M14 5v12M18 5v12M14 17c0 5-3 8-7 8-3 0-3-3-3-6 0-4 3-10 10-10M18 17c0 5 3 8 7 8 3 0 3-3 3-6 0-4-3-10-10-10"/></symbol>
-<symbol id="i-scan" viewBox="0 0 32 32"><path d="M4 10V6a2 2 0 012-2h4M22 4h4a2 2 0 012 2v4M28 22v4a2 2 0 01-2 2h-4M10 28H6a2 2 0 01-2-2v-4M4 16h24"/></symbol>
-<symbol id="i-arrow" viewBox="0 0 32 32"><path d="M5 16h22M20 9l7 7-7 7"/></symbol>
-<symbol id="i-clip" viewBox="0 0 32 32"><rect x="7" y="5" width="18" height="23" rx="2"/><path d="M12 5V3h8v2M12 14h8M12 19h8"/></symbol>
-<symbol id="i-mail" viewBox="0 0 32 32"><rect x="3" y="7" width="26" height="18" rx="3"/><path d="M4 9l12 9 12-9"/></symbol>
-<symbol id="i-hosp" viewBox="0 0 32 32"><path d="M5 28V8h22v20M3 28h26M16 12v8M12 16h8M13 28v-5h6v5"/></symbol>
-<symbol id="i-lock" viewBox="0 0 32 32"><rect x="6" y="14" width="20" height="14" rx="3"/><path d="M10 14V10a6 6 0 0112 0v4"/></symbol>
-</defs></svg>
-<div class="top"><div class="w">
-<a href="tel:+251255530362">Office: +251 255 530 362</a>
-<a href="tel:+251904277500">Mobile: +251 904 277 500</a>
-<span>Haramaya University, Main Campus</span>
-<a class="sp" href="contact.html#emergency">Emergency information</a></div></div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Patient Registration – Haramaya University Health Center</title>
+    <link rel="icon" href="assets/img/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute">
+      <defs>
+        <symbol id="i-steth" viewBox="0 0 32 32">
+          <path
+            d="M8 4v8a6 6 0 0012 0V4M5 4h6M17 4h6M14 18v3a6 6 0 0012 0v-2"
+          />
+          <circle cx="26" cy="16" r="3" />
+        </symbol>
+        <symbol id="i-kit" viewBox="0 0 32 32">
+          <rect x="4" y="10" width="24" height="17" rx="3" />
+          <path d="M12 10V7h8v3M16 15v8M12 19h8" />
+        </symbol>
+        <symbol id="i-book" viewBox="0 0 32 32">
+          <path
+            d="M4 7c4-2 8-2 12 1 4-3 8-3 12-1v18c-4-2-8-2-12 1-4-3-8-3-12-1z M16 8v18"
+          />
+        </symbol>
+        <symbol id="i-news" viewBox="0 0 32 32">
+          <rect x="5" y="5" width="22" height="22" rx="3" />
+          <path d="M10 11h12M10 16h12M10 21h7" />
+        </symbol>
+        <symbol id="i-phone" viewBox="0 0 32 32">
+          <path
+            d="M8 4h5l2 6-3 2a15 15 0 007 7l2-3 6 2v5a3 3 0 01-3 3A21 21 0 015 7a3 3 0 013-3z"
+          />
+        </symbol>
+        <symbol id="i-bolt" viewBox="0 0 32 32">
+          <path d="M18 3L7 18h8l-2 11 11-15h-8z" />
+        </symbol>
+        <symbol id="i-brain" viewBox="0 0 32 32">
+          <path
+            d="M16 6a5 5 0 00-9 3 5 5 0 00-1 8 5 5 0 005 7 4 4 0 005 2zM16 6a5 5 0 019 3 5 5 0 011 8 5 5 0 01-5 7 4 4 0 01-5 2zM16 6v20"
+          />
+        </symbol>
+        <symbol id="i-heart" viewBox="0 0 32 32">
+          <path
+            d="M16 27S4 20 4 12a6 6 0 0112-2 6 6 0 0112 2c0 8-12 15-12 15z"
+          />
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 32 32">
+          <path d="M16 29s9-8 9-15a9 9 0 10-18 0c0 7 9 15 9 15z" />
+          <circle cx="16" cy="14" r="3" />
+        </symbol>
+        <symbol id="i-user" viewBox="0 0 32 32">
+          <circle cx="16" cy="11" r="6" />
+          <path d="M5 28c0-6 5-10 11-10s11 4 11 10" />
+        </symbol>
+        <symbol id="i-shield" viewBox="0 0 32 32">
+          <path d="M16 3l11 4v8c0 7-5 12-11 14C10 27 5 22 5 15V7z" />
+          <path d="M11 16l4 4 7-8" />
+        </symbol>
+        <symbol id="i-scale" viewBox="0 0 32 32">
+          <path
+            d="M16 4v22M8 26h16M6 9h20M6 9l-3 9a4 4 0 006 0zM26 9l-3 9a4 4 0 006 0z"
+          />
+        </symbol>
+        <symbol id="i-users" viewBox="0 0 32 32">
+          <circle cx="12" cy="11" r="4" />
+          <path
+            d="M4 26c0-5 3-8 8-8s8 3 8 8M21 8a4 4 0 010 7M24 19c3 1 4 4 4 7"
+          />
+        </symbol>
+        <symbol id="i-coin" viewBox="0 0 32 32">
+          <circle cx="16" cy="16" r="12" />
+          <path d="M20 11c-1-2-7-2-7 1.500s7 1.500 7 5-6 3.500-8 1M16 8v16" />
+        </symbol>
+        <symbol id="i-star" viewBox="0 0 32 32">
+          <path
+            d="M16 4l3.500 8 8.500 1-6.500 6 2 8.500L16 23l-7.500 4.500 2-8.500L4 13l8.500-1z"
+          />
+        </symbol>
+        <symbol id="i-door" viewBox="0 0 32 32">
+          <path d="M7 28V5h14v23M3 28h26M17 16h2" />
+        </symbol>
+        <symbol id="i-bed" viewBox="0 0 32 32">
+          <path d="M3 24V8M3 20h26v4M29 20v-5a4 4 0 00-4-4H13v9" />
+          <circle cx="8" cy="15" r="2.500" />
+        </symbol>
+        <symbol id="i-award" viewBox="0 0 32 32">
+          <circle cx="16" cy="12" r="8" />
+          <path d="M11 19l-2 10 7-4 7 4-2-10" />
+        </symbol>
+        <symbol id="i-cal" viewBox="0 0 32 32">
+          <rect x="4" y="6" width="24" height="22" rx="3" />
+          <path d="M4 13h24M10 3v6M22 3v6" />
+        </symbol>
+        <symbol id="i-flask" viewBox="0 0 32 32">
+          <path
+            d="M12 4h8M14 4v8l-7 12a2 2 0 002 3h14a2 2 0 002-3l-7-12V4M10 20h12"
+          />
+        </symbol>
+        <symbol id="i-pill" viewBox="0 0 32 32">
+          <path d="M6 20L18 8a5 5 0 017 7L13 27a5 5 0 01-7-7zM12 14l6 6" />
+        </symbol>
+        <symbol id="i-baby" viewBox="0 0 32 32">
+          <circle cx="16" cy="12" r="7" />
+          <path
+            d="M12 12h.01M20 12h.01M13 15.500c2 1.500 4 1.500 6 0M7 29c0-5 4-8 9-8s9 3 9 8"
+          />
+        </symbol>
+        <symbol id="i-video" viewBox="0 0 32 32">
+          <rect x="3" y="8" width="19" height="16" rx="3" />
+          <path d="M22 14l7-4v12l-7-4" />
+        </symbol>
+        <symbol id="i-amb" viewBox="0 0 32 32">
+          <path
+            d="M3 22V10h15v12M18 14h6l4 5v3M3 22h3M12 22h9M10 13v6M7 16h6"
+          />
+          <circle cx="9" cy="23" r="2.500" />
+          <circle cx="24" cy="23" r="2.500" />
+        </symbol>
+        <symbol id="i-lung" viewBox="0 0 32 32">
+          <path
+            d="M14 5v12M18 5v12M14 17c0 5-3 8-7 8-3 0-3-3-3-6 0-4 3-10 10-10M18 17c0 5 3 8 7 8 3 0 3-3 3-6 0-4-3-10-10-10"
+          />
+        </symbol>
+        <symbol id="i-scan" viewBox="0 0 32 32">
+          <path
+            d="M4 10V6a2 2 0 012-2h4M22 4h4a2 2 0 012 2v4M28 22v4a2 2 0 01-2 2h-4M10 28H6a2 2 0 01-2-2v-4M4 16h24"
+          />
+        </symbol>
+        <symbol id="i-arrow" viewBox="0 0 32 32">
+          <path d="M5 16h22M20 9l7 7-7 7" />
+        </symbol>
+        <symbol id="i-clip" viewBox="0 0 32 32">
+          <rect x="7" y="5" width="18" height="23" rx="2" />
+          <path d="M12 5V3h8v2M12 14h8M12 19h8" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 32 32">
+          <rect x="3" y="7" width="26" height="18" rx="3" />
+          <path d="M4 9l12 9 12-9" />
+        </symbol>
+        <symbol id="i-hosp" viewBox="0 0 32 32">
+          <path d="M5 28V8h22v20M3 28h26M16 12v8M12 16h8M13 28v-5h6v5" />
+        </symbol>
+        <symbol id="i-lock" viewBox="0 0 32 32">
+          <rect x="6" y="14" width="20" height="14" rx="3" />
+          <path d="M10 14V10a6 6 0 0112 0v4" />
+        </symbol>
+      </defs>
+    </svg>
+    <div class="top">
+      <div class="w">
+        <a href="tel:+251255530362">Office: +251 255 530 362</a>
+        <a href="tel:+251904277500">Mobile: +251 904 277 500</a>
+        <span>Haramaya University, Main Campus</span>
+        <a class="sp" href="contact.html#emergency">Emergency information</a>
+      </div>
+    </div>
 
-<header><div class="w">
-<a class="brand" href="index.html"><img src="assets/img/logo.png" alt="Haramaya University seal" width="56" height="56"><span><b>Haramaya University<br>Health Center</b><span>Building the Basis for Development</span></span></a>
-<button class="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
-<nav id="nav" aria-label="Main">
-<a href="index.html">Home</a><a href="about.html">About Us</a><a href="departments.html">Departments</a><a href="services.html">Services</a><a href="news.html">News</a><a href="health-library.html">Health Library</a><a href="contact.html">Contact</a><a href="portal-login.html">Patient Portal</a>
-<a class="btn p" href="book-appointment.html">Book Appointment</a></nav>
-</div></header>
-<main><div class="pghead"><div class="w"><div class="crumb"><a href="index.html">Home</a> / <b>Patient Portal</b></div><h1>Register for the Patient Portal</h1><p>Create an account to book and track appointments.</p></div></div><section><div class="w"><div class="fbox" style="max-width:560px"><form id="regForm" class="ff portalForm" novalidate><label>Full name *<input name="name" type="text" data-req placeholder=""><span class="er" role="alert"></span></label><label>Phone number *<input name="phone" type="tel" data-req placeholder=""><span class="er" role="alert"></span></label><label>Email address (optional)<input name="email" type="email"  placeholder=""><span class="er" role="alert"></span></label><label>Password *<input name="password" type="password" data-req><span class="er" role="alert"></span></label><label>Confirm password *<input name="password2" type="password" data-req><span class="er" role="alert"></span></label><button class="btn p" type="submit">Create account</button><div class="msg" role="status"></div></form><p style="margin-top:14px;text-align:center">Already registered? <a href="portal-login.html"><b>Log in</b></a></p></div></div></section></main>
-<footer><div class="w"><div class="f">
-<div><a class="brand" href="index.html"><img src="assets/img/logo.png" alt="" width="56" height="56"><span><b>Haramaya University<br>Health Center</b></span></a>
-<p style="margin-top:14px;max-width:26em">Accessible, affordable, patient-centered healthcare at the Haramaya University Main Campus.</p></div>
-<div><h4>Quick links</h4><ul><li><a href="about.html">About Us</a></li><li><a href="departments.html">Departments</a></li><li><a href="services.html">Services</a></li><li><a href="health-library.html">Health Library</a></li><li><a href="news.html">News</a></li><li><a href="contact.html">Contact</a></li><li><a href="careers.html">Careers</a></li><li><a href="check-status.html">Check appointment status</a></li></ul></div>
-<div><h4>Contact</h4><ul><li>Office: <a href="tel:+251255530362">+251 255 530 362</a></li><li>Mobile: <a href="tel:+251904277500">+251 904 277 500</a></li><li>In front of the Muslim Student Cafeteria, Main Campus</li></ul></div>
-</div><div class="cp"><span>© <span id="yr">2026</span> Haramaya University Health Center</span><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Conditions</a></div></div></footer>
-<script src="assets/js/main.js"></script></body></html>
+    <header>
+      <div class="w">
+        <a class="brand" href="index.html"
+          ><img
+            src="assets/img/logo.png"
+            alt="Haramaya University seal"
+            width="56"
+            height="56"
+          /><span
+            ><b>Haramaya University<br />Health Center</b
+            ><span>Building the Basis for Development</span></span
+          ></a
+        >
+        <button class="burger" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+        </button>
+        <nav id="nav" aria-label="Main">
+          <a href="index.html">Home</a><a href="about.html">About Us</a
+          ><a href="departments.html">Departments</a
+          ><a href="services.html">Services</a><a href="news.html">News</a
+          ><a href="health-library.html">Health Library</a
+          ><a href="contact.html">Contact</a
+          ><a href="portal-login.html">Patient Portal</a>
+          <a class="btn p" href="book-appointment.html">Book Appointment</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="pghead">
+        <div class="w">
+          <div class="crumb">
+            <a href="index.html">Home</a> / <b>Patient Portal</b>
+          </div>
+          <h1>Register for the Patient Portal</h1>
+          <p>Create an account to book and track appointments.</p>
+        </div>
+      </div>
+      <section>
+        <div class="w">
+          <div class="fbox" style="max-width: 560px">
+            <form id="regForm" class="ff portalForm" novalidate>
+              <label
+                >Full name *<input
+                  name="name"
+                  type="text"
+                  data-req
+                  placeholder="" /><span class="er" role="alert"></span></label
+              ><label
+                >Phone number *<input
+                  name="phone"
+                  type="tel"
+                  data-req
+                  placeholder="" /><span class="er" role="alert"></span></label
+              ><label
+                >Email address (optional)<input
+                  name="email"
+                  type="email"
+                  placeholder="" /><span class="er" role="alert"></span></label
+              ><label
+                >Password *<input
+                  name="password"
+                  type="password"
+                  data-req /><span class="er" role="alert"></span></label
+              ><label
+                >Confirm password *<input
+                  name="password2"
+                  type="password"
+                  data-req /><span class="er" role="alert"></span></label
+              ><button class="btn p" type="submit">Create account</button>
+              <div class="msg" role="status"></div>
+            </form>
+            <p style="margin-top: 14px; text-align: center">
+              Already registered? <a href="portal-login.html"><b>Log in</b></a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="w">
+        <div class="f">
+          <div>
+            <a class="brand" href="index.html"
+              ><img
+                src="assets/img/logo.png"
+                alt=""
+                width="56"
+                height="56"
+              /><span
+                ><b>Haramaya University<br />Health Center</b></span
+              ></a
+            >
+            <p style="margin-top: 14px; max-width: 26em">
+              Accessible, affordable, patient-centered healthcare at the
+              Haramaya University Main Campus.
+            </p>
+          </div>
+          <div>
+            <h4>Quick links</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="departments.html">Departments</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="health-library.html">Health Library</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="check-status.html">Check appointment status</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li>Office: <a href="tel:+251255530362">+251 255 530 362</a></li>
+              <li>Mobile: <a href="tel:+251904277500">+251 904 277 500</a></li>
+              <li>In front of the Muslim Student Cafeteria, Main Campus</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cp">
+          <span
+            >© <span id="yr">2026</span> Haramaya University Health Center</span
+          ><a href="privacy.html">Privacy Policy</a
+          ><a href="terms.html">Terms and Conditions</a>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
